@@ -394,28 +394,27 @@
 
 <!-- PDF Viewer -->
 <div id="pdfModal" class="pdf-viewer-overlay">
+    <div class="pdf-viewer-panel">
 
-  <div class="pdf-viewer-panel">
+        <div class="pdf-viewer-header">
+            <h3>Experience Document</h3>
 
-    <div class="pdf-viewer-header">
-      <h3>Experience Document</h3>
+            <button type="button"
+                    onclick="closePDF()"
+                    class="pdf-viewer-close">
+                &times;
+            </button>
+        </div>
 
-      <button type="button"
-              onclick="closePDF()"
-              class="pdf-viewer-close">
-        &times;
-      </button>
+        <iframe
+            id="pdfViewer"
+            title="Experience Document"
+            src="about:blank">
+        </iframe>
+
     </div>
-
-    <iframe
-      id="pdfViewer"
-      title="Experience Document"
-      src="about:blank">
-    </iframe>
-
-  </div>
-
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
