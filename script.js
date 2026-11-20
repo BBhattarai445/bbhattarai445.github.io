@@ -37,7 +37,6 @@ function openPDF(pdfPath) {
     const viewer = document.getElementById("pdfViewer");
 
     viewer.src = encodeURI(pdfPath);
-
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
@@ -48,7 +47,6 @@ function closePDF() {
 
     modal.style.display = "none";
     viewer.src = "about:blank";
-
     document.body.style.overflow = "";
 }
 
