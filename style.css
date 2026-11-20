@@ -493,6 +493,34 @@ span {
   .experience-header {
     flex-direction: column;
   }
+   ```css
+.experience-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.document-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.document-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .experience-right {
+    align-items: flex-start;
+  }
+}
+```
 }
 /* =========================
    SKILLS
