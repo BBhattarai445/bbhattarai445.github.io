@@ -396,22 +396,30 @@
     <!-- Footer -->     
     </footer>
 
-    <!-- PDF Viewer Modal (Step 2 goes here) -->
-    <div id="pdfModal" class="pdf-modal">
-      <div class="pdf-container">
+<!-- PDF Viewer -->
+<div id="pdfModal" class="pdf-viewer-overlay">
 
-        <div class="pdf-header">
-          <h3>Experience Document</h3>
-          <button onclick="closePDF()" class="pdf-close">
-            &times;
-          </button>
-        </div>
+  <div class="pdf-viewer-panel">
 
-        <iframe id="pdfViewer" src="" title="Experience PDF"></iframe>
+    <div class="pdf-viewer-header">
+      <h3>Experience Document</h3>
 
-      </div>
+      <button type="button"
+              onclick="closePDF()"
+              class="pdf-viewer-close">
+        &times;
+      </button>
     </div>
 
-    <script src="script.js"></script>
+    <iframe
+      id="pdfViewer"
+      title="Experience Document"
+      src="about:blank">
+    </iframe>
+
+  </div>
+
+</div>
+
 </body>
 </html>
