@@ -32,3 +32,22 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
+```javascript
+function openPDF(pdfPath) {
+  const modal = document.getElementById("pdfModal");
+  const viewer = document.getElementById("pdfViewer");
+
+  viewer.src = pdfPath;
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closePDF() {
+  const modal = document.getElementById("pdfModal");
+  const viewer = document.getElementById("pdfViewer");
+
+  modal.style.display = "none";
+  viewer.src = "";
+  document.body.style.overflow = "";
+}
+```
