@@ -388,15 +388,33 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <a href="#home" class="logo">BB<span>.</span></a>
-      <p>© <span id="year"></span> Bibek Bhattarai. All rights reserved.</p>
-      <a href="#home" class="back-top">Back to top ↑</a>
-    </div>
-  </footer>
+      <!-- Contact Section -->
+    <section id="contact" class="section">
+      <!-- Your contact content -->
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+      <!-- Your footer content -->
+      
+    </footer>
+
+    <!-- PDF Viewer Modal (Step 2 goes here) -->
+    <div id="pdfModal" class="pdf-modal">
+      <div class="pdf-container">
+
+        <div class="pdf-header">
+          <h3>Experience Document</h3>
+          <button onclick="closePDF()" class="pdf-close">
+            &times;
+          </button>
+        </div>
+
+        <iframe id="pdfViewer" src="" title="Experience PDF"></iframe>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
