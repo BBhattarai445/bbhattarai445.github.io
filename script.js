@@ -32,7 +32,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
-```javascript
+
 function openPDF(pdfPath) {
   const modal = document.getElementById("pdfModal");
   const viewer = document.getElementById("pdfViewer");
@@ -50,4 +50,4 @@ function closePDF() {
   viewer.src = "";
   document.body.style.overflow = "";
 }
-```
+
