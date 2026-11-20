@@ -367,6 +367,60 @@ span {
   color: var(--muted);
   font-size: 14px;
 }
+/* Education Section */
+.education-list {
+  max-width: 850px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 25px;
+}
+
+.education-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.education-card h3 {
+  margin-bottom: 6px;
+}
+
+.education-card h4 {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.education-date {
+  color: #aaa;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.education-card p {
+  color: #ccc;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .education-header {
+    flex-direction: column;
+  }
+}
 
 /* =========================
    SKILLS
