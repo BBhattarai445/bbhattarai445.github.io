@@ -659,10 +659,10 @@ h2 span,
 }
 
 .skill-card {
-  padding: 28px 22px;
+  padding: 20px 15px;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   transition: transform var(--transition), border-color var(--transition);
 }
 
