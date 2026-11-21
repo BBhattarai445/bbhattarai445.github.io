@@ -4,26 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Bibek Bhattarai's personal portfolio website. Discover my skills, projects and experience.">
   <meta name="author" content="Bibek Bhattarai">
 
   <title>Bibek Bhattarai | Personal Portfolio</title>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome (PDF icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
   <header class="header">
     <nav class="navbar container">
+
       <a href="#home" class="logo">BB<span>.</span></a>
 
-      <button class="menu-toggle" id="menu-toggle"
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
         aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="nav-links">
@@ -39,14 +51,20 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact" class="nav-contact">Contact Me ↗</a></li>
       </ul>
+
     </nav>
   </header>
 
+
   <main>
 
-    <!-- Hero Section -->
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
     <section class="hero container" id="home">
+
       <div class="hero-content">
+
         <p class="eyebrow">
           <span class="status-dot"></span>
           WELCOME TO MY PORTFOLIO
@@ -68,6 +86,7 @@
           <a href="#projects" class="btn btn-primary">
             Explore My Work ↗
           </a>
+
           <a href="#contact" class="btn btn-outline">
             Let's Connect
           </a>
@@ -75,193 +94,302 @@
 
         <div class="social-links">
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
           <a href="https://www.linkedin.com/in/bibek-bhattarai-b8047016a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+
           <a href="mailto:bkbhattarai@gmail.com">Email ↗</a>
         </div>
+
       </div>
 
+
       <div class="hero-visual">
+
         <div class="profile-card">
+
           <div class="profile-decoration"></div>
+
           <img
             src="Potfolio .jpeg"
             class="profile-photo"
-            >
+            alt="Portrait of Bibek Bhattarai">
+
           <p class="profile-name">Bibek Bhattarai</p>
+
           <p class="profile-caption">Mechanical Design Engineer</p>
+
           <div class="profile-tag">✦ Always learning</div>
+
         </div>
+
         <div class="floating-label label-one">💻 Technology</div>
         <div class="floating-label label-two">✦ Creativity</div>
+
       </div>
+
     </section>
 
-    <!-- About Section -->
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
     <section class="section container" id="about">
+
       <div class="section-heading">
         <p class="eyebrow">GET TO KNOW ME</p>
         <h2>About <span>Me</span></h2>
       </div>
 
       <div class="about-grid">
+
         <div>
+
           <p class="about-lead">
             Hello! I'm Bibek Bhattarai.
           </p>
+
           <p class="muted">
             I am an enthusiastic and motivated individual with an
             interest in technology, creativity and continuous learning.
             I enjoy discovering new ideas, developing useful skills
             and working on projects that help me grow.
           </p>
+
           <p class="muted">
             My goal is to keep improving, gain practical experience
             and create something meaningful through my work.
           </p>
-          <a href="#contact" class="text-link">Get in touch with me →</a>
+
+          <a href="#contact" class="text-link">
+            Get in touch with me →
+          </a>
+
         </div>
 
+
         <div class="about-highlight">
+
           <div class="highlight-icon">✦</div>
+
           <h3>My Philosophy</h3>
+
           <p>
             Learn something new every day. Stay curious,
             embrace challenges and never stop growing.
           </p>
+
         </div>
+
       </div>
+
     </section>
-<!-- Education Section -->
-<section id="education" class="section">
-  <div class="container">
-    <h2 class="section-title">Education</h2>
-    <p class="section-subtitle">
-      My academic background and learning journey.
-    </p>
 
-    <div class="education-list">
 
-      <div class="education-card">
-        <div class="education-header">
-          <div>
-            <h3>Master of Science (MSc) Renewable Energy Engineering and Management </h3>
-            <h4>The University Of Freiburg, Germany</h4>
-          </div>
-          <span class="education-date">
-            Oct 2021 – April 2025
-          </span>
-        </div>
+    <!-- =========================
+         EDUCATION SECTION
+    ========================== -->
+    <section id="education" class="section">
 
-        <p>
-          Battery Technology, PV, Green Hydrogen, Project Management, Programming in Python
-        </p>
-      </div>
-
-      <div class="education-card">
-        <div class="education-header">
-          <div>
-            <h3>Bachelor of Mechanical Engineering</h3>
-            <h4>Chhattishgarh University</h4>
-          </div>
-          <span class="education-date">
-            2015 – 2019
-          </span>
-        </div>
-
-        <p>
-          Mechanical Design, Product Design, Mechanical Simulation, and Testing.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Work Experience Section -->
-<section id="experience" class="section">
-  <div class="container">
-    <h2 class="section-title">Work Experience</h2>
-    <p class="section-subtitle">
-      My professional journey and experience.
-    </p>
-
-    <div class="experience-list">
-
-      <div class="experience-card">
-        <div class="experience-header">
-          <div>
-            <h3>Laboratory Operations Mechanical Engineering</h3>
-            <h4>Laserax Gmbh</h4>
-          </div>
-          <span class="experience-date">
-            Sep 2024 – Present
-          </span>
-        </div>
-
-        <h5>Work Performed:</h5>
-
-  <ul class="experience-points">
-    <li>Advanced CAD work for laser process machines and product data management using SolidWorks PDM.</li>
-    <li>Creating technical drawings, exploded views, and BOMs for assemblies and parts.</li>
-    <li>Data management and creation of traceability files for the routine calibration and maintenance of various mechanical equipment like sensors, hydraulics, valves, motors, gauges, etc</li>
-    <li>Worked with client companies on battery assemblies.</li>
-    <li>Design and installed mountings, structures, jigs, fixers, rigs, etc., for various lab applications.</li>
-    <li> Performed electrical work, including soldering, crimping for wire fabrication, and EMI work for certified lab activities.</li>
-    <li>Worked with client companies on battery assemblies.</li>
-    <li>Process control and project management tools, i.e., Jira and the CRM system, i.e., Genius.</li>
-    <li> Managed lab inventory and safety protocols per ISO 9001:2015, MSMD, and emergency protocols, with complete health-related certification and training.</li>
-    <li>Process control and project management tools, i.e., Jira and CRM system, i.e., Genius.</li>
-    <li>oversee the overall management of the labs as the sole member of the company, taking full responsibility for operations and effectively handling high-pressure situations.</li>
-    
-  </ul>
-</div>
-
-      <div class="experience-card">
-        <div class="experience-header">
-
-    <div>
-        <h3>Technology Assistant (Part-time)</h3>
-        <h4>Rena Technologies GmbH</h4>
-    </div>
-
-    <div class="experience-right">
-        <span class="experience-date">
-            Month Year – Month Year
-        </span>
-
-        <a href="#" class="document-link"
-           onclick="openPDF('Rena.pdf'); return false;">
-            <i class="fas fa-file-pdf"></i>
-            View PDF
-        </a>
-    </div>
-
-</div>
-
-        <h5>Work Performed:</h5>
-
-  <ul class="experience-points">
-    <li>Collaboration in the development of systems for industrial glass processing</li>
-    <li>Characterization of etched glass, through-holes TGV, blind holes BGV, glass surfaces, and thickness reduction.</li>
-    <li>Work with the Olympus reflected light microscope</li>
-    <li>Setting up and carrying out setups for etching glass in the fume cupboard and supporting the etching of glass in test systems.</li>
-    <li>Preparation of reports..</li>
-  </ul>
-    
-        
-
-    </div>
-  </div>
-</section>
-    <!-- Skills Section -->
-    <section class="section section-alt" id="skills">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">WHAT I BRING</p>
-          <h2>My <span>Skills</span></h2>
-          <p class="muted">A collection of skills I'm developing and improving.</p>
+
+        <h2 class="section-title">Education</h2>
+
+        <p class="section-subtitle">
+          My academic background and learning journey.
+        </p>
+
+
+        <div class="education-list">
+
+          <div class="education-card">
+
+            <div class="education-header">
+
+              <div>
+                <h3>Master of Science (MSc) Renewable Energy Engineering and Management</h3>
+                <h4>The University Of Freiburg, Germany</h4>
+              </div>
+
+              <span class="education-date">
+                Oct 2021 – April 2025
+              </span>
+
+            </div>
+
+            <p>
+              Battery Technology, PV, Green Hydrogen, Project Management, Programming in Python.
+            </p>
+
+          </div>
+
+
+          <div class="education-card">
+
+            <div class="education-header">
+
+              <div>
+                <h3>Bachelor of Mechanical Engineering</h3>
+                <h4>Chhattishgarh University</h4>
+              </div>
+
+              <span class="education-date">
+                2015 – 2019
+              </span>
+
+            </div>
+
+            <p>
+              Mechanical Design, Product Design, Mechanical Simulation, and Testing.
+            </p>
+
+          </div>
+
         </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORK EXPERIENCE SECTION
+    ========================== -->
+    <section id="experience" class="section">
+
+      <div class="container">
+
+        <h2 class="section-title">Work Experience</h2>
+
+        <p class="section-subtitle">
+          My professional journey and experience.
+        </p>
+
+
+        <div class="experience-list">
+
+
+          <!-- Current Experience -->
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Laboratory Operations Mechanical Engineering</h3>
+                <h4>Laserax Gmbh</h4>
+              </div>
+
+              <span class="experience-date">
+                Sep 2024 – Present
+              </span>
+
+            </div>
+
+            <h5>Work Performed:</h5>
+
+            <ul class="experience-points">
+
+              <li>Advanced CAD work for laser process machines and product data management using SolidWorks PDM.</li>
+
+              <li>Creating technical drawings, exploded views, and BOMs for assemblies and parts.</li>
+
+              <li>Data management and creation of traceability files for the routine calibration and maintenance of various mechanical equipment like sensors, hydraulics, valves, motors, gauges, etc.</li>
+
+              <li>Worked with client companies on battery assemblies.</li>
+
+              <li>Designed and installed mountings, structures, jigs, fixers, rigs, etc., for various lab applications.</li>
+
+              <li>Performed electrical work, including soldering and crimping for wire fabrication, and EMI work for certified lab activities.</li>
+
+              <li>Used process control and project management tools, including Jira, and the CRM system Genius.</li>
+
+              <li>Managed lab inventory and safety protocols per ISO 9001:2015, MSMD, and emergency protocols, with health-related certification and training.</li>
+
+              <li>Oversaw the overall management of the labs as the sole member of the company, taking responsibility for operations and handling high-pressure situations.</li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- Rena Technologies Experience -->
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Technology Assistant (Part-time)</h3>
+                <h4>Rena Technologies GmbH</h4>
+              </div>
+
+              <div class="experience-right">
+
+                <span class="experience-date">
+                  Month Year – Month Year
+                </span>
+
+                <a
+                  href="Rena.pdf"
+                  class="document-link"
+                  onclick="openPDF('Rena.pdf'); return false;"
+                  aria-label="View Rena Technologies experience document">
+
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View PDF
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <h5>Work Performed:</h5>
+
+            <ul class="experience-points">
+
+              <li>Collaboration in the development of systems for industrial glass processing.</li>
+
+              <li>Characterization of etched glass, through-holes TGV, blind holes BGV, glass surfaces, and thickness reduction.</li>
+
+              <li>Worked with the Olympus reflected light microscope.</li>
+
+              <li>Setting up and carrying out setups for etching glass in the fume cupboard and supporting the etching of glass in test systems.</li>
+
+              <li>Preparation of reports.</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+    <section class="section section-alt" id="skills">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">WHAT I BRING</p>
+
+          <h2>My <span>Skills</span></h2>
+
+          <p class="muted">
+            A collection of skills I'm developing and improving.
+          </p>
+
+        </div>
+
 
         <div class="skills-grid">
+
           <div class="skill-card">
             <span class="skill-icon">🌐</span>
             <h3>Web Development</h3>
@@ -285,96 +413,162 @@
             <h3>Communication</h3>
             <p>Teamwork and collaboration</p>
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Projects Section -->
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
     <section class="section container" id="projects">
+
       <div class="section-heading">
+
         <p class="eyebrow">MY RECENT WORK</p>
+
         <h2>Featured <span>Projects</span></h2>
+
         <p class="muted">
           Some projects I have worked on or plan to develop.
         </p>
+
       </div>
+
 
       <div class="projects-grid">
 
+
         <article class="project-card">
+
           <div class="project-image project-one">
             <span>01</span>
             <div class="project-symbol">⌘</div>
           </div>
+
           <div class="project-info">
+
             <p class="project-category">WEB DEVELOPMENT</p>
+
             <h3>Personal Portfolio</h3>
+
             <p class="muted">
               A responsive personal website to showcase my
               background, skills and work.
             </p>
+
             <div class="project-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
-            <a href="https://github.com/" target="_blank"
-              rel="noopener noreferrer" class="text-link">
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link">
               View Project ↗
             </a>
+
           </div>
+
         </article>
 
+
         <article class="project-card">
+
           <div class="project-image project-two">
             <span>02</span>
             <div class="project-symbol">✧</div>
           </div>
+
           <div class="project-info">
+
             <p class="project-category">CREATIVE PROJECT</p>
+
             <h3>Creative Web Design</h3>
+
             <p class="muted">
               A modern web design concept focused on a clean
               interface and user experience.
             </p>
+
             <div class="project-tags">
-              <span>Design</span><span>CSS</span><span>UI</span>
+              <span>Design</span>
+              <span>CSS</span>
+              <span>UI</span>
             </div>
-            <a href="https://github.com/" target="_blank"
-              rel="noopener noreferrer" class="text-link">
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link">
               View Project ↗
             </a>
+
           </div>
+
         </article>
 
+
         <article class="project-card">
+
           <div class="project-image project-three">
             <span>03</span>
             <div class="project-symbol">⌘</div>
           </div>
+
           <div class="project-info">
+
             <p class="project-category">PERSONAL LEARNING</p>
+
             <h3>Learning Journey</h3>
+
             <p class="muted">
               A collection of experiments and practice projects
               created while learning new technologies.
             </p>
+
             <div class="project-tags">
-              <span>Learning</span><span>Technology</span>
+              <span>Learning</span>
+              <span>Technology</span>
             </div>
-            <a href="https://github.com/" target="_blank"
-              rel="noopener noreferrer" class="text-link">
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link">
               View Project ↗
             </a>
+
           </div>
+
         </article>
 
       </div>
+
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
     <section class="section section-alt" id="contact">
+
       <div class="container contact-container">
+
         <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
-        <h2>Let's create something <span>great together.</span></h2>
+
+        <h2>
+          Let's create something <span>great together.</span>
+        </h2>
+
         <p class="muted">
           I'm always open to new opportunities, collaborations
           and interesting conversations.
@@ -387,34 +581,67 @@
         <p class="contact-email">
           <strong>bkbhattarai@gmail.com</strong>
         </p>
+
       </div>
+
     </section>
 
   </main>
 
-<!-- PDF Viewer -->
-<div id="pdfModal" class="pdf-viewer-overlay">
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> Bibek Bhattarai. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- =========================
+       PDF VIEWER MODAL
+  ========================== -->
+  <div
+    id="pdfModal"
+    class="pdf-viewer-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Experience Document">
+
     <div class="pdf-viewer-panel">
 
-        <div class="pdf-viewer-header">
-            <h3>Experience Document</h3>
+      <div class="pdf-viewer-header">
 
-            <button type="button"
-                    onclick="closePDF()"
-                    class="pdf-viewer-close">
-                &times;
-            </button>
-        </div>
+        <h3>Experience Document</h3>
 
-        <iframe
-            id="pdfViewer"
-            title="Experience Document"
-            src="about:blank">
-        </iframe>
+        <button
+          type="button"
+          onclick="closePDF()"
+          class="pdf-viewer-close"
+          aria-label="Close PDF viewer">
+
+          &times;
+
+        </button>
+
+      </div>
+
+      <iframe
+        id="pdfViewer"
+        title="Experience Document"
+        src="about:blank">
+      </iframe>
 
     </div>
-</div>
 
-<script src="script.js"></script>
+  </div>
+
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
 </body>
 </html>
