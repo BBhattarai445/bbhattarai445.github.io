@@ -504,7 +504,81 @@ span {
 /* =========================
    PDF VIEWER
 ========================= */
+.pdf-viewer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
+.pdf-viewer-panel {
+    width: 100%;
+    max-width: 1100px;
+    height: 90vh;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-viewer-header {
+    min-height: 60px;
+    padding: 10px 20px;
+    background: #101827;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.pdf-viewer-header h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.pdf-viewer-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background: #e74c3c;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#pdfViewer {
+    display: block;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    border: none;
+    background: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .pdf-viewer-overlay {
+        padding: 8px;
+    }
+
+    .pdf-viewer-panel {
+        height: 95vh;
+    }
+
+    .pdf-viewer-header {
+        padding: 10px 14px;
+    }
+}
+  
 
 @media (max-width: 600px) {
   .experience-header {
@@ -811,78 +885,4 @@ span {
    PDF VIEWER MODAL
 ======================================== */
 
-.pdf-viewer-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    background: rgba(0, 0, 0, 0.92);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
 
-.pdf-viewer-panel {
-    width: 100%;
-    max-width: 1100px;
-    height: 90vh;
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.pdf-viewer-header {
-    min-height: 60px;
-    padding: 10px 20px;
-    background: #101827;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.pdf-viewer-header h3 {
-    margin: 0;
-    color: #ffffff;
-}
-
-.pdf-viewer-close {
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 6px;
-    background: #e74c3c;
-    color: #ffffff;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-#pdfViewer {
-    display: block;
-    width: 100%;
-    flex: 1;
-    min-height: 0;
-    border: none;
-    background: #ffffff;
-}
-
-@media (max-width: 600px) {
-    .pdf-viewer-overlay {
-        padding: 8px;
-    }
-
-    .pdf-viewer-panel {
-        height: 95vh;
-    }
-
-    .pdf-viewer-header {
-        padding: 10px 14px;
-    }
-}
-  
