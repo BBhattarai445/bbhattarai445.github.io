@@ -1,35 +1,55 @@
 
-// Mobile navigation menu
+// ========================================
+// Mobile Navigation Menu
+// ========================================
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
 if (menuToggle && navLinks) {
+
+    function closeMenu() {
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+    }
+
     menuToggle.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("active");
 
-        menuToggle.setAttribute("aria-expanded", isOpen);
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation menu" : "Open navigation menu"
-        );
+        const isOpen = navLinks.classList.contains("active");
 
-        menuToggle.textContent = isOpen ? "✕" : "☰";
+        if (isOpen) {
+            closeMenu();
+        } else {
+            navLinks.classList.add("active");
+
+            menuToggle.setAttribute("aria-expanded", "true");
+            menuToggle.setAttribute("aria-label", "Close navigation menu");
+            menuToggle.textContent = "✕";
+        }
     });
 
-    // Close menu when a navigation link is clicked
+    // Close menu after clicking a navigation link
 
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Open navigation menu");
-            menuToggle.textContent = "☰";
-        });
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    // Close menu when Escape is pressed
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
     });
 }
 
-// Automatic copyright year
+
+// ========================================
+// Automatic Copyright Year
+// ========================================
 
 const yearElement = document.getElementById("year");
 
@@ -37,9 +57,13 @@ if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-// Open PDF inside website
+
+// ========================================
+// PDF Viewer
+// ========================================
 
 function openPDF(pdfPath) {
+
     const modal = document.getElementById("pdfModal");
     const viewer = document.getElementById("pdfViewer");
 
@@ -54,9 +78,11 @@ function openPDF(pdfPath) {
     document.body.style.overflow = "hidden";
 }
 
-// Close PDF and return to previous page position
+
+// Close PDF Viewer
 
 function closePDF() {
+
     const modal = document.getElementById("pdfModal");
     const viewer = document.getElementById("pdfViewer");
 
@@ -69,3 +95,28 @@ function closePDF() {
 }
 
 
+// ========================================
+// Close PDF with Escape or Outside Click
+// ========================================
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+        closePDF();
+    }
+
+});
+
+const pdfModal = document.getElementById("pdfModal");
+
+if (pdfModal) {
+
+    pdfModal.addEventListener("click", (event) => {
+
+        if (event.target === pdfModal) {
+            closePDF();
+        }
+
+    });
+
+}
