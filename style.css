@@ -500,6 +500,11 @@ span {
   gap: 12px;
 }
 
+
+/* =========================
+   PDF VIEWER
+========================= */
+
 .pdf-viewer-overlay {
     display: none;
     position: fixed;
@@ -511,7 +516,6 @@ span {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    box-sizing: border-box;
 }
 
 .pdf-viewer-panel {
@@ -539,10 +543,15 @@ span {
     background: #e74c3c;
     color: white;
     border: none;
+    border-radius: 5px;
     font-size: 28px;
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+.pdf-viewer-close:hover {
+    background: #c0392b;
 }
 
 #pdfViewer {
@@ -553,7 +562,24 @@ span {
     border: none;
     background: white;
 }
+
+/* Mobile PDF viewer */
+
+@media (max-width: 600px) {
+    .pdf-viewer-overlay {
+        padding: 5px;
+    }
+
+    .pdf-viewer-panel {
+        height: 95dvh;
+        border-radius: 6px;
+    }
+
+    .pdf-viewer-header {
+        padding: 8px 12px;
+    }
 }
+
 /* =========================
    SKILLS
 ========================= */
