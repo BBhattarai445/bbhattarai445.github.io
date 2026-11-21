@@ -1,7 +1,8 @@
 
-// ========================================
-// Mobile Navigation Menu
-// ========================================
+
+/* ========================================
+   1. MOBILE NAVIGATION MENU
+======================================== */
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -29,6 +30,7 @@ if (menuToggle && navLinks) {
             menuToggle.setAttribute("aria-label", "Close navigation menu");
             menuToggle.textContent = "✕";
         }
+
     });
 
     // Close menu after clicking a navigation link
@@ -37,19 +39,12 @@ if (menuToggle && navLinks) {
         link.addEventListener("click", closeMenu);
     });
 
-    // Close menu when Escape is pressed
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-    });
 }
 
 
-// ========================================
-// Automatic Copyright Year
-// ========================================
+/* ========================================
+   2. AUTOMATIC COPYRIGHT YEAR
+======================================== */
 
 const yearElement = document.getElementById("year");
 
@@ -58,68 +53,114 @@ if (yearElement) {
 }
 
 
-// ========================================
-// PDF Viewer
-// ========================================
+/* ========================================
+   3. PDF VIEWER ELEMENTS
+======================================== */
+
+const pdfModal = document.getElementById("pdfModal");
+const pdfViewer = document.getElementById("pdfViewer");
+
+let previousBodyOverflow = "";
+
+
+/* ========================================
+   4. OPEN PDF VIEWER
+======================================== */
 
 function openPDF(pdfPath) {
 
-    const modal = document.getElementById("pdfModal");
-    const viewer = document.getElementById("pdfViewer");
-
-    if (!modal || !viewer) {
+    if (!pdfModal || !pdfViewer) {
         console.error("PDF viewer elements not found.");
         return;
     }
 
-    viewer.src = encodeURI(pdfPath);
+    if (!pdfPath) {
+        console.error("No PDF file path was provided.");
+        return;
+    }
 
-    modal.style.display = "flex";
-    console.log("PDF modal display:", getComputedStyle(modal).display);
-    console.log("PDF modal position:", getComputedStyle(modal).position);
-    console.log("PDF modal z-index:", getComputedStyle(modal).zIndex);
+    // Remember the current page scrolling setting
+    previousBodyOverflow = document.body.style.overflow;
+
+    // Load the PDF
+    pdfViewer.src = encodeURI(pdfPath);
+
+    // Display the modal as a centered flex container
+    pdfModal.style.display = "flex";
+
+    // Prevent background page scrolling
     document.body.style.overflow = "hidden";
+
 }
 
 
-// Close PDF Viewer
+/* ========================================
+   5. CLOSE PDF VIEWER
+======================================== */
 
 function closePDF() {
 
-    const modal = document.getElementById("pdfModal");
-    const viewer = document.getElementById("pdfViewer");
+    if (!pdfModal || !pdfViewer) {
+        return;
+    }
 
-    if (!modal || !viewer) return;
+    // Hide the modal
+    pdfModal.style.display = "none";
 
-    modal.style.display = "none";
-    viewer.src = "about:blank";
+    // Stop displaying the PDF
+    pdfViewer.src = "about:blank";
 
-    document.body.style.overflow = "";
+    // Restore the previous page scrolling setting
+    document.body.style.overflow = previousBodyOverflow;
+
 }
 
 
-// ========================================
-// Close PDF with Escape or Outside Click
-// ========================================
-
-document.addEventListener("keydown", (event) => {
-
-    if (event.key === "Escape") {
-        closePDF();
-    }
-
-});
-
-const pdfModal = document.getElementById("pdfModal");
+/* ========================================
+   6. CLOSE PDF WHEN CLICKING OUTSIDE
+======================================== */
 
 if (pdfModal) {
 
     pdfModal.addEventListener("click", (event) => {
 
+        // Close only when the dark overlay itself is clicked
         if (event.target === pdfModal) {
             closePDF();
         }
 
     });
 
+}
+
+
+/* ========================================
+   7. KEYBOARD CONTROLS
+======================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    // Escape closes the PDF viewer
+    if (event.key === "Escape") {
+
+        if (pdfModal && pdfModal.style.display === "flex") {
+            closePDF();
+        }
+
+        // Also close the mobile navigation
+        if (navLinks && navLinks.classList.contains("active")) {
+            closeMenu();
+        }
+
+    }
+
+});
+
+
+/* ========================================
+   8. INITIAL PDF VIEWER STATE
+======================================== */
+
+if (pdfModal) {
+    pdfModal.style.display = "none";
 }
