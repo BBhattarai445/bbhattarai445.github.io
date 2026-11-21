@@ -75,6 +75,9 @@ function openPDF(pdfPath) {
     viewer.src = encodeURI(pdfPath);
 
     modal.style.display = "flex";
+    console.log("PDF modal display:", getComputedStyle(modal).display);
+    console.log("PDF modal position:", getComputedStyle(modal).position);
+    console.log("PDF modal z-index:", getComputedStyle(modal).zIndex);
     document.body.style.overflow = "hidden";
 }
 
