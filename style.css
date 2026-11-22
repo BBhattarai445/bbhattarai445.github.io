@@ -648,68 +648,7 @@ h2 span,
 }
 
 
-/* Compact Training Cards */
-
-.trainings-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    max-width: 900px;
-    margin: 30px auto 0;
-}
-
-.training-card {
-    padding: 20px;
-    border-radius: 14px;
-}
-
-.training-top {
-    margin-bottom: 15px;
-}
-
-.training-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 18px;
-    border-radius: 11px;
-}
-
-.training-date {
-    padding: 5px 11px;
-    font-size: 12px;
-}
-
-.training-card h3 {
-    font-size: 18px;
-    margin-bottom: 6px;
-}
-
-.training-card h4 {
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.training-card p {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.training-footer {
-    padding-top: 10px;
-}
-
-.training-document {
-    font-size: 13px;
-    gap: 8px;
-}
-
-@media (max-width: 768px) {
-    .trainings-grid {
-        grid-template-columns: 1fr;
-        max-width: 450px;
-    }
-}
-/* ========================================
+=========================
    10. SKILLS SECTION
 ======================================== */
 
@@ -1293,60 +1232,27 @@ button:focus-visible {
 
 }
 
-/* FORCE SMALLER TRAINING BOXES */
 
-section#trainings .trainings-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 320px)) !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    max-width: 100% !important;
-    margin: 25px auto !important;
+/* Training certificate links inside skill-style cards */
+
+#trainings .document-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 9px 13px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-section#trainings .training-card {
-    width: 100% !important;
-    min-height: 0 !important;
-    padding: 16px !important;
-    border-radius: 12px !important;
+#trainings .document-link:hover {
+    background: var(--primary);
+    color: var(--bg);
 }
 
-section#trainings .training-top {
-    margin-bottom: 10px !important;
-}
 
-section#trainings .training-icon {
-    width: 36px !important;
-    height: 36px !important;
-    font-size: 16px !important;
-}
-
-section#trainings .training-card h3 {
-    font-size: 16px !important;
-    margin-bottom: 5px !important;
-}
-
-section#trainings .training-card h4 {
-    font-size: 12px !important;
-    margin-bottom: 8px !important;
-}
-
-section#trainings .training-card p {
-    font-size: 12px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 12px !important;
-}
-
-section#trainings .training-footer {
-    padding-top: 8px !important;
-}
-
-section#trainings .training-document {
-    font-size: 12px !important;
-}
-
-@media (max-width: 768px) {
-    section#trainings .trainings-grid {
-        grid-template-columns: minmax(0, 320px) !important;
-    }
-}
