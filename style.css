@@ -1292,3 +1292,61 @@ button:focus-visible {
   }
 
 }
+
+/* FORCE SMALLER TRAINING BOXES */
+
+section#trainings .trainings-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 320px)) !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+    margin: 25px auto !important;
+}
+
+section#trainings .training-card {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+}
+
+section#trainings .training-top {
+    margin-bottom: 10px !important;
+}
+
+section#trainings .training-icon {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 16px !important;
+}
+
+section#trainings .training-card h3 {
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+}
+
+section#trainings .training-card h4 {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+}
+
+section#trainings .training-card p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+}
+
+section#trainings .training-footer {
+    padding-top: 8px !important;
+}
+
+section#trainings .training-document {
+    font-size: 12px !important;
+}
+
+@media (max-width: 768px) {
+    section#trainings .trainings-grid {
+        grid-template-columns: minmax(0, 320px) !important;
+    }
+}
