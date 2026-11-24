@@ -1250,9 +1250,65 @@ button:focus-visible {
     transition: all 0.3s ease;
 }
 
+
+/* Skills cards - side by side layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 #trainings .document-link:hover {
     background: var(--primary);
     color: var(--bg);
 }
+
+
+/* Training cards - side by side layout */
+#trainings .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#trainings .skill-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #trainings .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #trainings .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
